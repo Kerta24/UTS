@@ -19,6 +19,7 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/mycss.css" rel="stylesheet"> 
 
 </head>
 
@@ -26,15 +27,15 @@
 
     <div class="container">
 
-        <div class="card o-hidden border-0 shadow-lg my-5">
+        <div class="card o-hidden border-0 shadow-lg my-5 m-1">
             <div class="card-body p-0">
                 <!-- Nested Row within Card Body -->
                 <div class="row">
                     <!--<div class="col-lg-5 d-none d-lg-block bg-register-image"></div> -->
                     <div class="col-lg-12">
-                        <div class="p-5">
+                        <div class="p-7">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Buat Akun !</h1>
+                                <h1 class="h4 text-gray-900 mb-5">Buat Akun !</h1>
                             </div>
                             <form class="user">
                                 <div class="form-group row">
@@ -61,7 +62,7 @@
                                             id="exampleRepeatPassword" placeholder="Konfirmasi Password">
                                     </div>
                                 </div>
-                                <a href="login.html" class="btn btn-primary btn-user btn-block">
+                                <a href="login.php" class="btn btn-primary btn-user btn-block">
                                     Daftar
                                 </a>
                                 <hr>
@@ -74,10 +75,10 @@
                             </form>
                             <hr>
                             <div class="text-center">
-                                <a class="small" href="forgot-password.html">Lupa Password?</a>
+                                <a class="small" href="forgot-password.php">Lupa Password?</a>
                             </div>
                             <div class="text-center">
-                                <a class="small" href="login.html">Sudah mempunyai akun? Login!</a>
+                                <a class="small" href="login.php">Sudah mempunyai akun? Login!</a>
                             </div>
                         </div>
                     </div>

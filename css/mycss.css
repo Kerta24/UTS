@@ -1,0 +1,18 @@
+.p-7 {
+    padding: 6rem !important;
+}
+
+.btn-block-1 {
+    display: block;
+    position: flex;
+
+}
+
+.m-1 {
+    margin: 5rem !important;
+}
+.bg-lupa-image-1 {
+    background: url("gambar-monster-inc-4.jpg");
+    background-position: center;
+    background-size: cover;
+  }
