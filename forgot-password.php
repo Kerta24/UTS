@@ -41,7 +41,7 @@
                                 <div class="p-7" >
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-2">Lupa Password?</h1>
-                                        <p class="mb-4">Makanya kalau buat pasword itu diinget goblk!</p>
+                                        <p class="mb-4">Makanya kalau buat pasword itu diinget!</p>
                                     </div>
                                     <form class="user">
                                         <div class="form-group">
