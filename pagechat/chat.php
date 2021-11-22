@@ -62,7 +62,7 @@
 
         <div class="mb-3 me-3 ms-3">
           <label  for="mindarea" class="form-label">What's your mind?</label>
-          <textarea class="form-control mb-2" id="mindarea" rows="3"></textarea>
+          <textarea placeholder="New status...." class="form-control mb-2" id="mindarea" rows="3"></textarea>
 
           <form class="float-end" action="">
           <button type="submit" class="btn btn-primary">Post</button>

@@ -27,7 +27,7 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Profile</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
@@ -202,8 +202,8 @@
                 <h2 class="mb-5">Go to the room chating and sharing</h2>
                 <div class="btn-group" role="group" aria-label="Basic outlined example">
                     
-                <a href="index.html" class="btn btn-primary btn-user btn-block-1">
-                Login
+                <a href="pagechat/chat.php" class="btn btn-primary btn-user btn-block-1">
+                Go!
                  </a>
                     
                 </div>
