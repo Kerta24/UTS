@@ -60,14 +60,14 @@
                                                     </label>
                                             </div>
                                         </div>
-                                        <a href="index.html" class="btn btn-primary btn-user btn-block-1">
+                                        <a href="../index.php" class="btn btn-primary btn-user btn-block-1">
                                             Login
                                         </a>
                                         <hr>
-                                        <a href="index.html" class="btn btn-google btn-user btn-block-1">
+                                        <a href="../index.php" class="btn btn-google btn-user btn-block-1">
                                             <i class="fab fa-google fa-fw"></i> Login dengan Google
                                         </a>
-                                        <a href="index.html" class="btn btn-facebook btn-user btn-block-1">
+                                        <a href="../index.php" class="btn btn-facebook btn-user btn-block-1">
                                             <i class="fab fa-facebook-f fa-fw"></i> Login dengan Facebook
                                         </a>
                                     </form>
