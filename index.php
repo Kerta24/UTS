@@ -62,11 +62,11 @@
         <!-- Experience-->
         <section class="resume-section" id="experience">
             <div class="resume-section-content">
-                <h2 class="mb-5">Experience</h2>
+                <h2 class="mb-5">Pengalaman</h2>
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
                         <h3 class="mb-0">Senior Web Developer</h3>
-                        <div class="subheading mb-3">Intelitec Solutions</div>
+                        <div class="subheading mb-3">Di bidang</div>
                         <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution.
                             User generated content in real-time will have multiple touchpoints for offshoring.</p>
                     </div>
@@ -104,13 +104,13 @@
         <!-- Education-->
         <section class="resume-section" id="education">
             <div class="resume-section-content">
-                <h2 class="mb-5">Education</h2>
+                <h2 class="mb-5">Pendidikan</h2>
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
                         <h3 class="mb-0">University of Colorado Boulder</h3>
                         <div class="subheading mb-3">Bachelor of Science</div>
                         <div>Computer Science - Web Development Track</div>
-                        <p>GPA: 3.23</p>
+                        <p>IPK: 3.23</p>
                     </div>
                     <div class="flex-shrink-0"><span class="text-primary">August 2006 - May 2010</span></div>
                 </div>
@@ -118,7 +118,7 @@
                     <div class="flex-grow-1">
                         <h3 class="mb-0">James Buchanan High School</h3>
                         <div class="subheading mb-3">Technology Magnet Program</div>
-                        <p>GPA: 3.56</p>
+                        <p>IPK: 3.56</p>
                     </div>
                     <div class="flex-shrink-0"><span class="text-primary">August 2002 - May 2006</span></div>
                 </div>
@@ -128,8 +128,8 @@
         <!-- Skills-->
         <section class="resume-section" id="skills">
             <div class="resume-section-content">
-                <h2 class="mb-5">Skills</h2>
-                <div class="subheading mb-3">Programming Languages & Tools</div>
+                <h2 class="mb-5">Skill</h2>
+                <!-- <div class="subheading mb-3">Programming Languages & Tools</div>
                 <ul class="list-inline dev-icons">
                     <li class="list-inline-item"><i class="fab fa-html5"></i></li>
                     <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
@@ -143,8 +143,8 @@
                     <li class="list-inline-item"><i class="fab fa-gulp"></i></li>
                     <li class="list-inline-item"><i class="fab fa-grunt"></i></li>
                     <li class="list-inline-item"><i class="fab fa-npm"></i></li>
-                </ul>
-                <div class="subheading mb-3">Workflow</div>
+                </ul> -->
+                <div class="subheading mb-3">Bahasa Pemrograman yang dikuasai</div>
                 <ul class="fa-ul mb-0">
                     <li>
                         <span class="fa-li"><i class="fas fa-check"></i></span> Mobile-First, Responsive Design
@@ -166,7 +166,7 @@
         <!-- Awards-->
         <section class="resume-section" id="awards">
             <div class="resume-section-content">
-                <h2 class="mb-5">Awards & Certifications</h2>
+                <h2 class="mb-5">Penghargaan dan Sertifikat</h2>
                 <ul class="fa-ul mb-0">
                     <li>
                         <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span> Google Analytics Certified Developer
