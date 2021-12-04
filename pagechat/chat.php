@@ -16,7 +16,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>Kerta Hendrawan</title>
+    <title>Dashboard</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/pricing/">
 
@@ -70,10 +70,11 @@
     <div class="container py-3"> 
       <main class="container">
       <div class="mb-3 me-3 ms-3">
-        <form class="" action="proses/proseslogin.php" method="POST">
+
+        <form class="" action="proses/proseschat.php" method="POST">
             <label  for="mindarea" class="form-label">What's your mind?</label>
             <textarea name="content" placeholder="New status...." class="form-control mb-2 container py-3" id="mindarea" rows="3"></textarea>
-            <button type="submit" class="float-end btn btn-primary">Post</button>
+            <button type="submit" class="float-end btn btn-primary">Posting</button>
           
         </form>
       </div>
