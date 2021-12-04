@@ -18,8 +18,9 @@ $result = $mysqli->query($sql);
 
 if ($result->num_rows > 0){
     // Session
+    $msg = "Login";
     $_SESSION["email"] = $email;
-    header("Location: ../../index.php");
+    header("Location: ../../index.php?msg=". $msg);
 }else {
     $msg = "Login gagal";
     header("Location: ../login.php?msg=". $msg);

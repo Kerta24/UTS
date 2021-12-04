@@ -1,3 +1,13 @@
+<?php
+    session_start();
+    require "../database.php";
+
+    $sqlfechStatus = "SELECT * FROM `status` LEFT JOIN user ON status.user_id = user.id ORDER BY status.created_at DESC;";
+    $sqlresultStatus = $mysqli->query($sqlfechStatus);
+
+    // var_dump($sqlresultStatus->fetch_assoc());
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -59,34 +69,37 @@
     <!-- Collom chat -->
     <div class="container py-3"> 
       <main class="container">
-
-        <div class="mb-3 me-3 ms-3">
-          <label  for="mindarea" class="form-label">What's your mind?</label>
-          <textarea placeholder="New status...." class="form-control mb-2" id="mindarea" rows="3"></textarea>
-
-          <form class="float-end" action="">
-          <button type="submit" class="btn btn-primary">Post</button>
-          </form>
-
-        </div>
+      <div class="mb-3 me-3 ms-3">
+        <form class="" action="proses/proseslogin.php" method="POST">
+            <label  for="mindarea" class="form-label">What's your mind?</label>
+            <textarea name="content" placeholder="New status...." class="form-control mb-2 container py-3" id="mindarea" rows="3"></textarea>
+            <button type="submit" class="float-end btn btn-primary">Post</button>
+          
+        </form>
+      </div>
+        
         
         <div class="mt-3 me-3 ms-5">
           <div class="row mt-5">
             <div class="col-lg-19">
-              <h5>Gojou</h5>
-                <p class="mb-0">I work hard Today!</p>
-                <a href="#">Like</a> <a href="comment.php">Comment</a> <a href="">chat</a>
-              <hr>
-
-              <h5>Steven</h5>
-                <p class="mb-0">I got work in https://www.getwork.com<p>
-                <a href="#">Like</a> <a href="comment.php">Comment</a> <a href="">chat</a>
-              <hr>
-
-              <h5>George</h5>
-                <p class="mb-0">Do you have a job?</p>
-                <a href="#">Like</a> <a href="comment.php">Comment</a> <a href="">chat</a>
-              <hr>
+              
+            
+            <?php
+              if ($sqlresultStatus->num_rows > 0) {
+                // ada data
+                // Perulangan
+                while($row = $sqlresultStatus->fetch_assoc()) {
+                 echo " <h5>$row[username]</h5>
+                <p class='mb-0'>$row[content]</p>
+                <a href='#'>Like</a> <a href='comment.php'>Comment</a> <a>chat</a>
+               <hr>";
+                }
+              } else {
+                // Tidak ada data
+                echo "<center>Tidak ada status sayang</center>";
+              }
+            ?>
+              
             </div>
 
           </div>
