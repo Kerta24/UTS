@@ -1,3 +1,26 @@
+<?php
+    session_start();
+    require "database.php";
+
+    $sqlfechStatus = "SELECT * FROM `status` LEFT JOIN user ON status.user_id = user.id ORDER BY status.created_at DESC;";
+    $sqlresultStatus = $mysqli->query($sqlfechStatus);
+
+    $sqlfechPengalaman = "SELECT * FROM `pengalaman` LEFT JOIN user ON pengalaman.user_id = user.id ORDER BY pengalaman.created_at DESC;";
+    $sqlresultPengalaman = $mysqli->query($sqlfechPengalaman);
+
+    $sqlfechPendidikan = "SELECT * FROM `pendidikan` LEFT JOIN user ON pendidikan.user_id = user.id ORDER BY pendidikan.created_at DESC;";
+    $sqlresultPendidikan = $mysqli->query($sqlfechPendidikan);
+
+    $sqlfechSkill = "SELECT * FROM `skill` LEFT JOIN user ON skill.user_id = user.id ORDER BY skill.created_at DESC;";
+    $sqlresultSkill = $mysqli->query($sqlfechSkill);
+
+    $sqlfechAwards = "SELECT * FROM `award` LEFT JOIN user ON award.user_id = user.id ORDER BY award.created_at DESC;";
+    $sqlresultAwards = $mysqli->query($sqlfechAwards);
+
+    // var_dump($sqlresultStatus->fetch_assoc());
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -63,41 +86,28 @@
         <section class="resume-section" id="experience">
             <div class="resume-section-content">
                 <h2 class="mb-5">Pengalaman</h2>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Senior Web Developer</h3>
-                        <div class="subheading mb-3">Di bidang</div>
-                        <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution.
-                            User generated content in real-time will have multiple touchpoints for offshoring.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">March 2013 - Present</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Web Developer</h3>
-                        <div class="subheading mb-3">Intelitec Solutions</div>
-                        <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close
-                            the loop on focusing solely on the bottom line.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">December 2011 - March 2013</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Junior Web Designer</h3>
-                        <div class="subheading mb-3">Shout! Media Productions</div>
-                        <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the
-                            start-up mentality to derive convergence on cross-platform integration.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">July 2010 - December 2011</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Web Design Intern</h3>
-                        <div class="subheading mb-3">Shout! Media Productions</div>
-                        <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">September 2008 - June 2010</span></div>
-                </div>
+               
+                <?php
+                    if ($sqlresultPengalaman->num_rows > 0) {
+                        // ada data
+                        // Perulangan
+                        while($rowpengalaman = $sqlresultPengalaman->fetch_assoc()) {
+                        echo "  <div class='d-flex flex-column flex-md-row justify-content-between mb-5'>
+                                    <div class='flex-grow-1'>
+                                        <h3 class= 'mb-0'>$rowpengalaman[profesi]</h3>
+                                        <div class='subheading mb-3'>$rowpengalaman[bidang]</div>
+                                            <p>$rowpengalaman[deskripsi]</p>
+                                        </div>
+                                    <div class='flex-shrink-0'><span class='text-primary'>$rowpengalaman[tanggal]</span></div>
+                                </div>
+                                " ;}
+                        } else {
+                            // Tidak ada data
+                            echo "<center>Tidak ada status sayang</center>";
+                        }
+                ?>
+                
+                
             </div>
         </section>
         <hr class="m-0" />
@@ -105,23 +115,28 @@
         <section class="resume-section" id="education">
             <div class="resume-section-content">
                 <h2 class="mb-5">Pendidikan</h2>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">University of Colorado Boulder</h3>
-                        <div class="subheading mb-3">Bachelor of Science</div>
-                        <div>Computer Science - Web Development Track</div>
-                        <p>IPK: 3.23</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">August 2006 - May 2010</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">James Buchanan High School</h3>
-                        <div class="subheading mb-3">Technology Magnet Program</div>
-                        <p>IPK: 3.56</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">August 2002 - May 2006</span></div>
-                </div>
+                
+                <?php
+                    if ($sqlresultPendidikan->num_rows > 0) {
+                        // ada data
+                        // Perulangan
+                        while($rowpendidikan = $sqlresultPendidikan->fetch_assoc()) {
+                        echo " <div class='d-flex flex-column flex-md-row justify-content-between mb-5'>
+                                    <div class='flex-grow-1'>
+                                        <h3 class='mb-0'>$rowpendidikan[universitas]</h3>
+                                            <div class='subheading mb-3'>$rowpendidikan[jurusan]</div>
+                                            <div>$rowpendidikan[prodi]</div>
+                                        <p>IPK: $rowpendidikan[ipk]</p>
+                                    </div>
+                                    <div class='flex-shrink-0'><span class='text-primary'>$rowpendidikan[tanggal_lulus]</span></div>
+                                </div>
+                                " ;}
+                        } else {
+                            // Tidak ada data
+                            echo "<center>Tidak ada status sayang</center>";
+                        }
+                ?>
+
             </div>
         </section>
         <hr class="m-0" />
@@ -129,36 +144,24 @@
         <section class="resume-section" id="skills">
             <div class="resume-section-content">
                 <h2 class="mb-5">Skill</h2>
-                <!-- <div class="subheading mb-3">Programming Languages & Tools</div>
-                <ul class="list-inline dev-icons">
-                    <li class="list-inline-item"><i class="fab fa-html5"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-angular"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-react"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-sass"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-less"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-wordpress"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-gulp"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-grunt"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-npm"></i></li>
-                </ul> -->
                 <div class="subheading mb-3">Bahasa Pemrograman yang dikuasai</div>
-                <ul class="fa-ul mb-0">
-                    <li>
-                        <span class="fa-li"><i class="fas fa-check"></i></span> Mobile-First, Responsive Design
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-check"></i></span> Cross Browser Testing & Debugging
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-check"></i></span> Cross Functional Teams
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-check"></i></span> Agile Development & Scrum
-                    </li>
-                </ul>
+                <?php
+                       if ($sqlresultSkill->num_rows > 0) {
+                        // ada data
+                        // Perulangan
+                        while($rowskill = $sqlresultSkill->fetch_assoc()) {
+                        echo "  <ul class='fa-ul mb-0'>
+                                    <li>
+                                        <span class='fa-li'><i class='fas fa-check'></i></span>$rowskill[bahasa_pemrograman]
+                                    </li>
+                                </ul>
+                                " ;}
+                        } else {
+                            // Tidak ada data
+                            echo "<center>Tidak ada status sayang</center>";
+                        }
+                ?>
+                
             </div>
         </section>
         <hr class="m-0" />
@@ -167,34 +170,23 @@
         <section class="resume-section" id="awards">
             <div class="resume-section-content">
                 <h2 class="mb-5">Penghargaan dan Sertifikat</h2>
-                <ul class="fa-ul mb-0">
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span> Google Analytics Certified Developer
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span> Mobile Web Specialist - Google Certification
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span> 1
-                        <sup>st</sup> Place - University of Colorado Boulder - Emerging Tech Competition 2009
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span> 1
-                        <sup>st</sup> Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span> 2
-                        <sup>nd</sup> Place - University of Colorado Boulder - Emerging Tech Competition 2008
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span> 1
-                        <sup>st</sup> Place - James Buchanan High School - Hackathon 2006
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span> 3
-                        <sup>rd</sup> Place - James Buchanan High School - Hackathon 2005
-                    </li>
-                </ul>
+                <?php
+                       if ($sqlresultAwards->num_rows > 0) {
+                        // ada data
+                        // Perulangan
+                        while($rowawards = $sqlresultAwards->fetch_assoc()) {
+                        echo "  <ul class='fa-ul mb-0'>
+                                    <li>
+                                    <span class='fa-li'><i class='fas fa-trophy text-warning'></i></span>$rowawards[sertifikat]
+                                    </li>
+                                </ul>
+                                " ;}
+                        } else {
+                            // Tidak ada data
+                            echo "<center>Tidak ada status sayang</center>";
+                        }
+                ?>
+               
             </div>
         </section>
         <section class="resume-section" id="chatting">
