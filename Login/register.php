@@ -23,7 +23,7 @@
 
 </head>
 
-<body class="bg-gradient-primary">
+<body class="bg-gradient-danger">
 
     <div class="container">
 
@@ -72,7 +72,7 @@
                                             id="confirmpassword" placeholder="Konfirmasi Password....">
                                     </div>
                                 </div>
-                                <button class="btn btn-primary btn-user btn-block" type="submit">Daftar</button>
+                                <button class="btn btn-danger btn-user btn-block" type="submit">Daftar</button>
                                 <br>
                             </form>
                             <hr>

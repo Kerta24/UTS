@@ -9,7 +9,7 @@ $decryptedpw = sha1($password);
 // validasi
 if (empty($email) || empty($password)){
     $msg = "Email atau katasandi tidak boleh kosong!";
-    header("Location: ../login.php?msg=".$msg);
+    header("Location: ../loginadmin.php?msg=".$msg);
     return;
 }
 
@@ -18,12 +18,11 @@ $result = $mysqli->query($sql);
 
 if ($result->num_rows > 0){
     // Session
-    $msg = "Login";
+    $msg = "Login admin";
     $_SESSION["email"] = $email;
-    header("Location: ../../index.php?msg=". $msg);
+    header("Location: ../admin.php?msg=". $msg);
 }else {
     $msg = "Login gagal";
-    header("Location: ../login.php?msg=". $msg);
+    header("Location: ../loginadmin.php?msg=". $msg);
 
 }
-

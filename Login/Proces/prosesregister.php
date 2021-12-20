@@ -28,7 +28,7 @@ if ($password !== $confirmpw){
 $sql = "INSERT INTO user (username, email, password, angkatan) VALUES ('$username', '$email', '$encryption', '$angkatan' )";
 
 if ($mysqli->query($sql) === TRUE) {
-    $msg = "Register sukses silakan login!";
+    $msg = "register berhasil silakan login";
   } else {
     $msg = "Register gagal";
   }

@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Login Alumni</title>
+    <title>Login Admin</title>
 
     <!-- Custom fonts for this template-->
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -23,7 +23,7 @@
 
 </head>
 
-<body class="bg-gradient-danger">
+<body class="bg-gradient-primary">
 
     <div class="container">
 
@@ -43,7 +43,7 @@
                                         <h1 class="h4 text-gray-900 mb-2">Selamat datang!</h1>
                                         <p class="h8 text-gray-900 mb-4">Silakan masukan username dan pasword anda!</p>
                                     </div>
-                                    <form action="Proces/proseslogin.php" class="user" method="POST">
+                                    <form action="Proses/prosesadminlogin.php" class="user" method="POST">
                                         <div class="form-group">
                                             <input type="email" name="email" class="form-control form-control-user"
                                                 id="exampleInputEmail" aria-describedby="emailHelp"
@@ -60,17 +60,12 @@
                                                     </label>
                                             </div>
                                         </div> -->
-                                        <button class="btn btn-danger btn-user btn-block" type="submit">Login</button>
+                                        <button class="btn btn-primary btn-user btn-block" type="submit">Login Admin</button>
                                         <br>
                                      
                                     </form>
                                     <hr>
-                                    <div class="text-center">
-                                        <a class="small" href="forgot-password.php">Lupa Password?</a>
-                                    </div>
-                                    <div class="text-center">
-                                        <a class="small" href="register.php">Buat Akun Baru!</a>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
